@@ -6,15 +6,15 @@
 <url> <loc>https://akv4k8s.io/examples</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://akv4k8s.io/how-it-works</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://akv4k8s.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://akv4k8s.io/installation</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://akv4k8s.io/reference</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://akv4k8s.io/setup</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://akv4k8s.io/tasks</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://akv4k8s.io/tutorials</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://akv4k8s.io/components/1-controller</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://akv4k8s.io/components/2-env-injector</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://akv4k8s.io/components/3-when-to-use-which</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://akv4k8s.io/tasks/0-prerequisites</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://akv4k8s.io/tasks/1-secret</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://akv4k8s.io/tasks/2-certificate</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://akv4k8s.io/tasks/3-multi-value-secret</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://akv4k8s.io/tasks/4-signing-key</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://akv4k8s.io/tutorials/0-prerequisites</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://akv4k8s.io/tutorials/1-secret</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://akv4k8s.io/tutorials/2-certificate</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://akv4k8s.io/tutorials/3-multi-value-secret</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://akv4k8s.io/tutorials/4-signing-key</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
