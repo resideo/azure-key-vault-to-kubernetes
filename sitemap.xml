@@ -19,4 +19,5 @@
 <url> <loc>https://akv4k8s.io/tutorials/2-certificate</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://akv4k8s.io/tutorials/3-signing-key</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://akv4k8s.io/tutorials/4-multi-value-secret</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://akv4k8s.io/tutorials/5-env-injector-pfx-certificate</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
