@@ -63,6 +63,7 @@ type azureKeyVaultConfig struct {
 	cloudConfigHostPath      string
 	cloudConfigContainerPath string
 	dockerPullTimeout        int
+	nonRootuser				 string
 }
 
 var config azureKeyVaultConfig
@@ -86,6 +87,10 @@ func setLogLevel(logLevel string) {
 // the /azure-keyvault/ folder to use as auth
 func getInitContainers() []corev1.Container {
 	cmd := "cp /usr/local/bin/azure-keyvault-env /azure-keyvault/"
+
+	if(config.nonRootuser) {
+		cmd = cmd + fmt.Sprintf(" && chown -R %s:%s %s", nonRootuser, nonRootuser, "/azure-keyvault")
+	}
 
 	if !config.customAuth {
 		cmd = cmd + fmt.Sprintf(" && cp %s %s && ", config.cloudConfigHostPath, config.cloudConfigContainerPath)
@@ -568,6 +573,7 @@ func main() {
 		dockerPullTimeout:        viper.GetInt("CUSTOM_DOCKER_PULL_TIMEOUT"),
 		cloudConfigHostPath:      "/etc/kubernetes/azure.json",
 		cloudConfigContainerPath: "/azure-keyvault/azure.json",
+		nonRootuser:			  viper.GetString("CUSTOM_NON_ROOT_USER"),
 	}
 
 	if config.customAuth {
