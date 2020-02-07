@@ -569,7 +569,7 @@ func main() {
 		credentialsSecretName:    viper.GetString("CUSTOM_AUTH_INJECT_SECRET_NAME"),
 		dockerPullTimeout:        viper.GetInt("CUSTOM_DOCKER_PULL_TIMEOUT"),
 		cloudConfigHostPath:      "/etc/kubernetes/azure.json",
-		cloudConfigContainerPath: "/azure-keyvault/azure.json"
+		cloudConfigContainerPath: "/azure-keyvault/azure.json",
 	}
 
 	if config.customAuth {
