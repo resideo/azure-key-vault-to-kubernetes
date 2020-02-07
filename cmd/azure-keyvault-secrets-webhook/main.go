@@ -87,7 +87,7 @@ func setLogLevel(logLevel string) {
 func getInitContainers() []corev1.Container {
 	cmd := "cp /usr/local/bin/azure-keyvault-env /azure-keyvault/"
 
-	cmd = cmd + fmt.Sprintf(" && chmod -R a+w %s", "/azure-keyvault")
+	cmd = cmd + fmt.Sprintf(" && chmod -R 777 %s", "/azure-keyvault")
 
 	if !config.customAuth {
 		cmd = cmd + fmt.Sprintf(" && cp %s %s && ", config.cloudConfigHostPath, config.cloudConfigContainerPath)
