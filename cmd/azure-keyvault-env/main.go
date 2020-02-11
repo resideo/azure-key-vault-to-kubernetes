@@ -147,7 +147,6 @@ func main() {
 				log.Fatalf("%s secret not found in azure key vault: %s", logPrefix, keyVaultSecretSpec.Spec.Vault.Object.Name)
 			} else {
 				environ[i] = fmt.Sprintf("%s=%s", name, secret)
-				log.Debugf("name=%s secret=%s from azure key vault", name, secret)
 			}
 		}
 	}
