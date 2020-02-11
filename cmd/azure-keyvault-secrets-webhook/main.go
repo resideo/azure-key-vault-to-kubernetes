@@ -89,13 +89,14 @@ func getInitContainers() []corev1.Container {
 
 	if !config.customAuth {
 		cmd = cmd + fmt.Sprintf(" && cp %s %s && ", config.cloudConfigHostPath, config.cloudConfigContainerPath)
-		cmd = cmd + fmt.Sprintf("chmod 444 %s", config.cloudConfigContainerPath)
+		cmd = cmd + fmt.Sprintf("chmod -R a+rw %s && ", "/azure-keyvault")
+		cmd = cmd + fmt.Sprintf("chmod a+rwx %s ", "/azure-keyvault/azure-keyvault-env")
 	}
 
 	container := corev1.Container{
 		Name:            "copy-azurekeyvault-env",
 		Image:           viper.GetString("azurekeyvault_env_image"),
-		ImagePullPolicy: corev1.PullIfNotPresent,
+		ImagePullPolicy: corev1.PullAlways,
 		Command:         []string{"sh", "-c", cmd},
 		VolumeMounts: []corev1.VolumeMount{
 			{
