@@ -96,7 +96,7 @@ func getInitContainers() []corev1.Container {
 	container := corev1.Container{
 		Name:            "copy-azurekeyvault-env",
 		Image:           viper.GetString("azurekeyvault_env_image"),
-		ImagePullPolicy: corev1.PullIfNotPresent,
+		ImagePullPolicy: corev1.PullAlways,
 		Command:         []string{"sh", "-c", cmd},
 		VolumeMounts: []corev1.VolumeMount{
 			{
