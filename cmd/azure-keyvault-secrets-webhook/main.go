@@ -89,7 +89,7 @@ func getInitContainers() []corev1.Container {
 
 	if !config.customAuth {
 		cmd = cmd + fmt.Sprintf(" && cp %s %s && ", config.cloudConfigHostPath, config.cloudConfigContainerPath)
-		cmd = cmd + fmt.Sprintf("chmod -R a+rw %s && ", "/azure-keyvault")
+		cmd = cmd + fmt.Sprintf("chmod -R a+rw-t %s && ", "/azure-keyvault")
 		cmd = cmd + fmt.Sprintf("chmod a+rwx %s ", "/azure-keyvault/azure-keyvault-env")
 	}
 
